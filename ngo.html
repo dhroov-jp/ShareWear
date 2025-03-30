@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManavJyot Charitable Trust</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f3f4f6;
+            margin: 0;
+        }
+
+        /* Header Styles */
+        .header-container {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 85px;
+            margin-left: 10px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-right: 28px;
+        }
+
+        .profile-container img {
+            height: 42px;
+            transition: transform 0.3s;
+    
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-name {
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Page Styles */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .ngo-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ngo-logo img {
+            width: 250px; /* Adjust the size as needed */
+        }
+
+        .header {
+            text-align: center;
+            color: #0056b3;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Enhanced Styles for Activities and Address */
+        .activities,
+        .address {
+            margin-top: 40px;
+        }
+
+        .activities h3 {
+            font-size: 28px;
+            color: #00796b;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .activities ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .activities ul li {
+            background: #e0f7fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .activities ul li i {
+            font-size: 24px;
+            color: #00796b;
+            margin-right: 15px;
+        }
+
+        .address {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto; /* Centers the address box */
+}
+
+        .address h2 {
+            font-size: 30px;
+            color: #558b2f;
+           margin-top: 5px;
+        }
+
+        .address p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        .footer-container {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Poppins';
+            position: relative; /* Ensure footer is at the bottom */
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff7e5f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .activities ul li {
+                font-size: 16px;
+            }
+
+            .address h2 {
+                font-size: 24px;
+            }
+
+            .address p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="header-container">
+        <div class="logo">
+            <a href="grp25.php"> 
+                <img src="logo.jpeg" alt="ShareWear Logo" class="logo">
+            </a>
+        </div>
+        <div class="profile-container">
+            <a href="login.php">
+                <img src="profile.jpeg" alt="Profile" class="profile-pic">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- NGO Logo Section -->
+        <div class="ngo-logo">
+            <img src="ngo.jpg" alt="Manav Jyot Logo">
+        </div>
+
+        <!-- Organization Details -->
+        <div class="header">
+            <h1>ManavJyot Charitable Trust</h1>
+            <p>Reg. Trust Estd. 1991: CSR No. CSR00010121</p>
+            <p>Reg. No. F-15249 (33 Years) Standing</p>
+        </div>
+
+        <!-- Activities Section -->
+        <div class="activities">
+            <h3>Our Activities</h3>
+            <ul>
+                <li><i class="fas fa-pills"></i> Drug Bank for kidney failure patients.</li>
+                <li><i class="fas fa-hands-helping"></i> Medicine Collection Box for distribution to the poor & needy free of charge.</li>
+                <li><i class="fas fa-recycle"></i> Medicines worth Rs. 1 Cr. distributed to other Medicine Banks in Bhavnagar & Surat.</li>
+                <li><i class="fas fa-tshirt"></i> Old & wearable clothes distributed to 50 NGOs for the poor.</li>
+                <li><i class="fas fa-ribbon"></i> Costly Cancer Medicines provided free to the needy.</li>
+                <li><i class="fas fa-wheelchair"></i> Medical Equipment like wheelchairs, walkers, and oxygen cylinders available on deposit & hire.</li>
+                <li><i class="fas fa-book-open"></i> Publication of public utility information.</li>
+                <li><i class="fas fa-heart"></i> Financial support for heart, kidney, and cancer patients through recommendation letters to other trusts.</li>
+                <li><i class="fas fa-users"></i> Support for NGOs working with widows, adivasi, unmarried mothers, mentally ill, CP child homes, and more.</li>
+                <li><i class="fas fa-hands"></i> Support for last stage cancer patients and their rehabilitation.</li>
+                <li><i class="fas fa-network-wired"></i> Support to 200 NGOs across various illness categories.</li>
+            </ul>
+            <p style="text-align: center;">All activities are supervised by a highly qualified individual with 40 years of dedication to the community.</p>
+        </div>
+
+        <!-- Address Section -->
+        <div class="address">
+            <h2>Contact Us</h2>
+            <p><strong>Manav Jyot</strong></p>
+            <p>61, Unique Ind. Estate, Jawahar Talkies, Near Anand Hotel,</p>
+            <p>Dr.R.P. Road, Mulund (West), Mumbai - 400 080</p>
+            <p><strong>Phone:</strong> 91375 14459</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 ShareWear. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="fblogo.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="twitterlogo.jpeg" alt="Twitter"></a>
+                <a href="#"><img src="iglogo.jpeg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

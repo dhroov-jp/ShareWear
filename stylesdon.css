@@ -1,0 +1,647 @@
+/* General Styles */ 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh; /* Ensure the body takes full height */
+    background: linear-gradient(135deg, #f3e6e8 0%, #caf8fd 70%);
+    background-attachment: fixed; /* Keeps the background steady while scrolling */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+}
+
+.logo {
+    height: 85px;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.profile-pic {
+    height: 42px;
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Location Section Styling */
+#location-section{
+    max-width: 630px;
+    border: 1px solid #ccc;
+    padding: 9px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 425px; /* Changed from fixed height */
+}
+
+#location-form {
+    margin-top: 5px;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.field-group {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 13px; /* Keep space between fields */
+}
+
+.field-group label {
+  width: 300px;
+    margin-right: 10px; /* Space between label and input */
+    text-align: right;
+}
+
+.field-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 280px;
+}
+
+.field-group input::placeholder {
+    font-size: 14px;
+    color: #999;
+    font-family: 'Poppins' , sans-serif;
+}
+
+#location-submit-button-container {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 20px; /* Add margin if needed */
+}
+
+#location-submit-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+#location-submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Red border for empty fields on validation error */
+.field-group input.error {
+    border: 2px solid red;
+}
+
+/* Main Layout Container */
+.container {
+    margin: 0 auto;
+    padding: 30px 40px 50px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space is distributed evenly */
+    height: 370px; /* Makes sure the container takes full height */
+}
+
+/* Steps Container */
+.steps-container {
+    width: 23%;
+    padding: 5px;
+    margin-top: 40px;
+    display: block; /* Initially visible */
+
+}
+
+.progress-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-steps li {
+    color: #000;
+    font-weight: 500;
+    padding: 20px 20px;
+    margin: 10px 0;
+    border: 1.5px solid #8b8484;
+    border-radius: 10px;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.progress-steps li.active {
+    color: #ffffff;
+    background-color: #ff7e5f;
+    border-color: #000000;
+}
+
+
+/* For the first active step on page load */
+.progress-steps li:first-child.active {
+    background-color: #ff7e5f;
+    color: white;
+    border: 1.4px solid #000000;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Progress Bar Fill */
+.progress {
+    height: 100%;
+    background: #ff7e5f;
+    border-radius: 5px;
+    width: 0%; /* Start at 0% */
+    transition: width 0.5s ease; /* Smooth transition for progress bar fill */
+}
+
+/* Step Text Color */
+.progress-steps li.completed {
+    background-color: #ff7e5f;
+    color: white;
+    border-color: #ff7e5f;
+}
+
+/* Upload Section */
+.upload-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+    margin-left: 15px;
+    
+}
+
+.upload-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.upload-clothes h1 {
+    margin-top: 5px;
+    margin-right: 130px;
+}
+
+.upload-video h2 {
+    margin-top: 5px;
+}
+
+.upload-clothes {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    height: 250px;
+}
+
+.upload-video {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    height: 250px;
+    margin-left: 30px;
+}
+
+.upload-clothes p {
+    margin-bottom: 3px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif ;
+}
+
+.upload-clothes button {
+    margin-top: 35px;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.upload-video button {
+    margin-top: 35px;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;    
+    border-radius: 5px;
+    font-family: 'Poppins' , sans-serif;  
+    margin-top: 10px;
+}
+
+/* Quantity and Size Section Styles */
+#quantity-size-section {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allows positioning of next/prev buttons */
+    width: 575px;
+    min-height: 350px;
+    border: 1px solid transparent;
+    margin-top: 20px;
+}
+
+#quantity-size-section h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+#cloth-detail-container h2 {
+   margin-top: 5px;
+}
+
+.input-group-head {
+    margin-top: 5px;
+}
+
+.input-group-head input {
+    width: 120px; /* Reduced width of input */
+    padding: 6px;
+    margin-left: 20px; /* Adjusted margin to shift inputs to the right */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Flexbox for better alignment */
+.input-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+.input-group label {
+    font-weight: 500;
+    color: #555;
+    margin-right: 10px;
+    width: 120px; /* Increased width to keep headings on a single line */
+    text-align: right; /* Align the text to the right for uniformity */
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: 150px; /* Reduced width of input */
+    padding: 6px;
+    margin-left: 30px; /* Adjusted margin to shift inputs to the right */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input-group input[type="number"]:focus,
+.input-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.cloth-detail h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cloth-item {
+    background-color: #ffffff;
+    padding: 10px; /* Add some padding for better visibility */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: visibility 0s, height 0.3s ease; /* Smooth height transition */
+    overflow: hidden; /* Hide overflow */
+    display: none; /* Initially hide all items */
+}
+
+.cloth-item.active {
+    display: block; /* Show only the active item */
+    height: auto; /* Allow height to adjust to content */
+}
+
+.cloth-item h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Slightly increased margin for spacing */
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between; /* Keeps the Previous/Next buttons on one side and the Continue button on the other */
+    align-items: center; /* Vertically center buttons */
+    width: 100%; /* Ensure it takes the full width */
+    margin-top: 15px;
+}
+
+.next-button {
+    padding: 10px 20px; /* Adjust padding for uniformity */
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text color */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Consistent font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth hover transition */
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.prev-button {
+    padding: 10px 20px; /* Adjust padding for uniformity */
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text color */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Consistent font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth hover transition */
+    margin-top: 10px;
+}
+
+#continue-button {
+    padding: 10px 20px;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 250px;
+    margin-top: 10px;
+}
+
+#continue-button:hover {
+    background-color: #218838; 
+}
+
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+
+    .navigation-buttons .prev-button,
+    .navigation-buttons .next-button,
+    #continue-button {
+        width: 100%; /* Make buttons full-width */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+}
+
+/* Styling for the dropoff time section */
+#dropoff-time-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-height: 280px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px; 
+    margin-right: 80px;
+}
+
+/* Section title */
+#dropoff-time-section h1 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600; /* Slightly bolder font */
+}
+
+/* Instructional text */
+#dropoff-time-section p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px; /* Ensures space between text and the inputs */
+    
+}
+
+/* Dropoff slots container */
+.dropoff-slots {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Styling individual dropoff slot buttons */
+.dropoff-slot {
+    padding: 9px 9px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 20%; /* Makes sure two buttons fit in each row */
+    text-align: center;
+    color: #000000; /* Ensure the text color is visible at all times */
+    display: inline-block; /* Ensure text visibility in the button */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Active dropoff slot styling */
+.dropoff-slot.active {
+    background-color: #ff6b00; /* Active slot background color */
+    color: #ffffff; /* Text color when the slot is active */
+    border-color: #000000;
+}
+
+/* Hover effect for dropoff slot */
+.dropoff-slot:hover {
+    border-color: #ff6b00;
+}
+
+.input-group-1{
+    margin-top: 50px;
+}
+
+.input-group-1 input{
+    padding: 5px 5px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 20%; /* Makes sure two buttons fit in each row */
+    text-align: center; 
+    font-family: 'Poppins';
+    margin-left: 15px;
+}
+
+/* Centering and styling submit button */
+#submitButton {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 45px;
+    width: 30%; /* Full width button */
+    text-align: center;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    #dropoff-time-section {
+        padding: 15px;
+        max-width: 100%;
+        margin-left: 0; /* Removes the left margin on smaller screens */
+    }
+
+    #dropoff-time-section h1 {
+        font-size: 20px;
+    }
+
+    #dropoff-time-section p {
+        font-size: 14px;
+    }
+
+    .dropoff-slot {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 100%; /* Full width for small screens */
+    }
+    
+    #submitButton {
+        font-size: 14px;
+    }
+}
+
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0; /* Adjust the padding as needed */
+    text-align: center;
+    font-family: 'Poppins';
+    width: 100%; /* Ensures the footer spans the full width */
+    position: fixed; /* Fixes the footer at the bottom of the page */
+    bottom: 0; /* Positions it at the very bottom */
+    left: 0; /* Ensures it covers the entire width */
+    z-index: 10; /* Ensures the footer stays above other content */
+  }
+  
+  footer a {
+    color: #ff7e5f;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+  }
+  
+#return-home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff7e5f; /* Use a gradient or a solid color as preferred */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Remove default underline for link */
+    font-family: 'Poppins' , sans-serif;
+}
+
+#return-home-button:hover {
+    background-color: #ff7043; /* Darken the button on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#return-home-button:active {
+    background-color: #ff5722; /* Change color on click for feedback */
+    transform: scale(0.98); /* Slightly reduce size on click for effect */
+}
+
+#thankyou-section {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 50px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Make sure it appears above other elements */
+    border-radius: 10px;
+}
+#thankyou-section p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+}

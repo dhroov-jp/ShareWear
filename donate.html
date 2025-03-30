@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesdon.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="grp26.html">
+                <img src="logo.jpeg" alt="ShareWear Logo" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="steps-container" id="steps-container"> <!-- Added id attribute -->
+            <ul class="progress-steps">
+                <li class="step active" id="step-1">Provide your Location</li>
+                <li class="step" id="step-2">Upload Clothes Image</li>
+                <li class="step" id="step-3">Provide Quantity and Size</li>
+                <li class="step" id="step-4">Time Selection For Dropoff</li>
+            </ul>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <section id="location-section">
+            <h1>Provide Your Location</h1>
+            <form id="location-form" action="submit_donation.php" method="post">
+                <div class="field-group">
+                    <label for="address-line-1">Flat, House no., Building, Apartment:</label>
+                    <input type="text" id="address-line-1" name="address_line_1" required>
+                </div>
+                <div class="field-group">
+                    <label for="address-line-2">Area, Street, Sector, Village:</label>
+                    <input type="text" id="address-line-2" name="address_line_2" required>
+                </div>
+                <div class="field-group">
+                    <label for="landmark">Landmark:</label>
+                    <input type="text" id="landmark" name="landmark" required>
+                </div>
+                <div class="field-group">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" title="Please enter a 6 digit PIN code" required>
+                </div>
+                <div class="field-group">
+                    <label for="city">Town/City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="field-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <button type="submit" id="location-submit-button">Submit Location</button>
+            </form>
+        </section>
+
+        <section class="upload-section" id="upload-section" style="display:none;">
+            <div class="upload-wrapper">
+                <div class="upload-clothes">
+                    <h1>Upload Clothes Image</h1>
+                    <p>Please upload clear images of the front and rear side of the clothes you want to donate.</p>
+                    <form id="uploadClothesForm" action="submit_donation.php" method="post" enctype="multipart/form-data">
+                        <label for="clothesImages">Select Images (multiple allowed):</label>
+                        <input type="file" id="clothesImages" name="clothesImages[]" accept="image/*" multiple required>
+                        <button type="submit">Upload Images</button>
+                    </form>
+                    </div>
+<!-- Upload Video Section -->
+<div class="upload-video">
+    <h2>Upload Clothes Video</h2>
+    <p>Optionally, you can upload a video showcasing the clothes. Please ensure the video quality is high and clearly displays the condition of the clothes.<br>Select Videos (multiple allowed):</p>
+    <form id="uploadVideoForm" method="post" enctype="multipart/form-data">
+        <input type="file" id="videoUpload" name="videoUpload[]" accept="video/*" multiple required>
+        <button type="button" id="uploadVideosButton">Upload Videos</button> <!-- Changed to type="button" -->
+    </form>
+</div>
+                
+            </div>
+        </section>
+
+        <section id="quantity-size-section" id="quantity-form" style="display:none;">
+            <h1>Provide Description about Clothes</h1>
+            <form id="quantity-form" action="submit_donation.php" method="post">
+                <div class="input-group-head">
+                    <label for="quantity">Quantity of Clothes:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="99" placeholder="Select Quantity" required>
+                </div>
+                <div id="cloth-detail-container" style="display: block;"> 
+                    <h2>Cloth 1</h2>
+                    <div class="input-group">
+                        <label for="cloth-type-1">Type:</label>
+                        <select id="cloth-type-1" name="cloth_type" required>
+                            <option value="" disabled selected>Select Type</option>
+                            <option value="T-shirt">T-shirt</option>
+                            <option value="Shirt">Shirt</option>
+                            <option value="Trousers">Trousers</option>
+                            <option value="Socks">Socks</option>
+                            <option value="Jacket">Jacket</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="age-group-1">Age Group:</label>
+                        <select id="age-group-1" name="age_group" required>
+                            <option value="" disabled selected>Select Age Group</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Child">Child</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="size-1">Size:</label>
+                        <select id="size-1" name="size" required>
+                            <option value="" disabled selected>Select Size</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="Extra Large">Extra Large</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="quality-1">Quality:</label>
+                        <select id="quality-1" name="quality" required>
+                            <option value="" disabled selected>Select Quality</option>
+                            <option value="New">New</option>
+                            <option value="Good">Good</option>
+                            <option value="Acceptable">Acceptable</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="prev-button">Previous</button>
+                    <button type="button" class="next-button">Next</button>
+                    <button id="continue-button" type="button" onclick="nextStep()">Continue</button>
+
+                </div>
+            </form> 
+        </section>
+        
+        <section class="dropoff-time-section" id="dropoff-time-section" style="display: none;">
+            <h1>Select Dropoff Time</h1>
+            <div class="dropoff-slots">
+                <button class="dropoff-slot" data-slot="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</button>
+                <button class="dropoff-slot" data-slot="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</button>
+                <button class="dropoff-slot" data-slot="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</button>
+                <button class="dropoff-slot" data-slot="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</button>
+            </div>
+            <div class="input-group-1">
+                <label for="dropoff-date">Choose Dropoff Date:</label>
+                <input type="date" id="dropoff-date" name="Dropoff_date" required>
+            </div>
+            <input type="hidden" id="dropoff-time-slot" name="Dropoff_time_slot" required>
+            <button id="submitButton" type="submit" name="dropoff-submit">Submit Information</button>
+
+        </section>
+
+        <section id="thankyou-section" style="display: none;">
+            <h1>Thank You for Your Donation!</h1>
+            <p>We appreciate your generosity. You will receive a confirmation email shortly with all the details of your donation.</p>
+            <button id="return-home-button">Return to Home Page</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 ShareWear. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="fblogo.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="twitterlogo.jpeg" alt="Twitter"></a>
+                <a href="#"><img src="iglogo.jpeg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+
+</html>

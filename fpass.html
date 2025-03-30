@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShareWear Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesfpass.css"> 
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a href="grp25.php"> 
+          <img src="logo.jpeg" alt="ShareWear Logo" class="logo">
+        </a>
+        <ul class="nav-li">
+          <li class="profile-container">
+            <a href="login.php">
+              <img src="profile.jpeg" alt="Profile" class="profile-pic">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Login form section -->
+  <div class="container login-container">
+    <h1>Password Assistance</h1>
+    <form method="POST" id="forgot-password-form">
+      <div class="form-group">
+        <label for="username">Enter the email address or mobile phone number associated with your account.</label>
+      </div>
+      <div class="form-group">
+        <label for="Email">Email-ID</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      </div>      
+      <button type="submit" class="btn btn-primary">Continue</button>
+    </form>
+
+    <!-- Confirmation Message Section -->
+    <div id="confirmation-message" class="confirmation-message" style="display: none;">
+      <p>A reset password link has been sent to your email address.</p>
+      <button id="return-login" class="btn return-btn">Return to Login Page</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 ShareWear. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="fblogo.jpeg" alt="Facebook"></a>
+        <a href="#"><img src="twitterlogo.jpeg" alt="Twitter"></a>
+        <a href="#"><img src="iglogo.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Hide the form and show the confirmation message
+      document.getElementById('forgot-password-form').style.display = 'none';
+      document.getElementById('confirmation-message').style.display = 'block';
+    });
+
+    // Handle return to login page button
+    document.getElementById('return-login').addEventListener('click', function() {
+      window.location.href = 'login.php'; // Redirect to login page
+    });
+  </script>
+</body>
+</html>
